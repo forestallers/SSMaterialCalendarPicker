@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "SSMaterialCalendarPicker"
-  s.version      = "1.2.7"
+  s.version      = "1.2.8"
   s.summary      = "A lightly-customizable calendar pop-up view for range selection inspired by Google's Material Design Guidelines and apps."
   s.homepage     = "https://github.com/iurichiba/SSMaterialCalendarPicker"
   s.screenshots  = "http://i.imgur.com/h2kNho0.png", "http://i.imgur.com/30Eivbn.gif"
@@ -56,7 +56,7 @@ Pod::Spec.new do |s|
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  s.source       = { :git => "https://github.com/iurichiba/SSMaterialCalendarPicker.git", :tag => "v1.2.7" }
+  s.source       = { :git => "https://github.com/iurichiba/SSMaterialCalendarPicker.git", :tag => "v1.2.8" }
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   #
@@ -78,7 +78,7 @@ Pod::Spec.new do |s|
   #
 
   # s.resources = "SSMaterialCalendarPicker/Classes/**/*.xib"
-  s.resources = "SSMaterialCalendarPicker/Classes/CalendarViews.bundle"
+  s.resource_bundles = {'CalendarViews' => ['SSMaterialCalendarPicker/Classes/**/*.xib']}
 
 
   # ――― Project Linking ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
