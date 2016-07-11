@@ -8,6 +8,7 @@
 
 #import "SSMaterialCalendarPicker.h"
 #import "NSDate+SSDateAdditions.h"
+#import "SSBundleHelper.h"
 
 #define kCalendarHeaderHeight 72.0f
 #define kPickerViewHeight 351.0f
@@ -81,8 +82,8 @@
 - (id)initWithFrame:(CGRect)frame {
     self = [super initWithFrame:frame];
     if (self) {
-        UINib *cellNib = [UINib nibWithNibName:NSStringFromClass([SSCalendarCollectionViewCell class]) bundle:nil];
-        self = [[[UINib nibWithNibName:NSStringFromClass([self class]) bundle:[NSBundle bundleForClass:[self class]]] instantiateWithOwner:self options:nil] objectAtIndex:0];
+        UINib *cellNib = [UINib nibWithNibName:NSStringFromClass([SSCalendarCollectionViewCell class]) bundle:[SSBundleHelper calendarBundle]];
+        self = [[[UINib nibWithNibName:NSStringFromClass([self class]) bundle:[SSBundleHelper calendarBundle]] instantiateWithOwner:self options:nil] objectAtIndex:0];
         [self setFrame:frame];
         [self initializeDates];
         [self addCalendarMask];
