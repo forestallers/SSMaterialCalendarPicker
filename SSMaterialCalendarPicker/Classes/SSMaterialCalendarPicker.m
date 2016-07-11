@@ -9,9 +9,6 @@
 #import "SSMaterialCalendarPicker.h"
 #import "NSDate+SSDateAdditions.h"
 
-#define kCalendarCellIdentifier @"SSCalendarCollectionViewCell"
-#define kCalendarPickerIdentifier @"SSMaterialCalendarPicker"
-
 #define kCalendarHeaderHeight 72.0f
 #define kPickerViewHeight 351.0f
 
@@ -84,16 +81,15 @@
 - (id)initWithFrame:(CGRect)frame {
     self = [super initWithFrame:frame];
     if (self) {
-        UINib *cellNib = [UINib nibWithNibName:kCalendarCellIdentifier bundle:nil];
-        self = [[[NSBundle bundleForClass:[SSMaterialCalendarPicker class]]
-                 loadNibNamed:kCalendarPickerIdentifier owner:self options:nil] objectAtIndex:0];
+        UINib *cellNib = [UINib nibWithNibName:NSStringFromClass([SSCalendarCollectionViewCell class]) bundle:nil];
+        self = [[[UINib nibWithNibName:NSStringFromClass([self class]) bundle:[NSBundle bundleForClass:[self class]]] instantiateWithOwner:self options:nil] objectAtIndex:0];
         [self setFrame:frame];
         [self initializeDates];
         [self addCalendarMask];
         [self.calendarCollectionView setAllowsMultipleSelection:YES];
         [self.calendarCollectionView setMultipleTouchEnabled:NO];
-        [self.calendarCollectionView registerNib:cellNib forCellWithReuseIdentifier:kCalendarCellIdentifier];
-        [self.headerCollectionView registerNib:cellNib forCellWithReuseIdentifier:kCalendarCellIdentifier];
+        [self.calendarCollectionView registerNib:cellNib forCellWithReuseIdentifier:NSStringFromClass([SSCalendarCollectionViewCell class])];
+        [self.headerCollectionView registerNib:cellNib forCellWithReuseIdentifier:NSStringFromClass([SSCalendarCollectionViewCell class])];
         [(UICollectionViewFlowLayout *)self.headerCollectionView.collectionViewLayout setMinimumInteritemSpacing:0];
         [(UICollectionViewFlowLayout *)self.headerCollectionView.collectionViewLayout setMinimumLineSpacing:0];
         [(UICollectionViewFlowLayout *)self.calendarCollectionView.collectionViewLayout setMinimumInteritemSpacing:0];

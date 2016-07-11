@@ -77,7 +77,7 @@ Pod::Spec.new do |s|
   #  non-essential files like tests, examples and documentation.
   #
 
-  s.resources = "SSMaterialCalendarPicker/Classes/**/*.{xib}"
+  s.resources = "SSMaterialCalendarPicker/Classes/**/*.xib"
 
 
   # ――― Project Linking ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -100,6 +100,7 @@ Pod::Spec.new do |s|
   #  you can include multiple dependencies to ensure it works.
 
   s.requires_arc = true
+  s.xcconfig = { "FRAMEWORK_SEARCH_PATHS" => "$(PODS_ROOT)/../../Framework $(PODS_ROOT)/../External" }
 
   # s.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libxml2" }
   # s.dependency "JSONKit", "~> 1.4"
