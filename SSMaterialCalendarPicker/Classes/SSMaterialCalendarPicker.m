@@ -223,7 +223,7 @@
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     SSCalendarCollectionViewCell *calendarCell =
-    [collectionView dequeueReusableCellWithReuseIdentifier:kCalendarCellIdentifier forIndexPath:indexPath];
+    [collectionView dequeueReusableCellWithReuseIdentifier:NSStringFromClass([SSCalendarCollectionViewCell class]) forIndexPath:indexPath];
     if (collectionView == self.headerCollectionView) [calendarCell setHeaderMode:YES];
     [calendarCell setCellDate:[dates objectAtIndex:indexPath.row]];
     [calendarCell setPrimaryColor:self.primaryColor];
