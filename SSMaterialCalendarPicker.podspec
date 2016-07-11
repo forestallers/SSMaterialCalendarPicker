@@ -78,7 +78,7 @@ Pod::Spec.new do |s|
   #
 
   # s.resources = "SSMaterialCalendarPicker/Classes/**/*.xib"
-  s.resource_bundles = {'CalendarViews' => ['SSMaterialCalendarPicker/Classes/**/*.xib']}
+  s.resource_bundles = "SSMaterialCalendarPicker/Classes/CalendarViews.bundle"
 
 
   # ――― Project Linking ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #

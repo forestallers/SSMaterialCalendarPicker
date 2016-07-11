@@ -10,8 +10,7 @@
 		EE20ABFD1B62A4B6009B50D6 /* NSDate+SSDateAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = EE20ABF91B62A4B6009B50D6 /* NSDate+SSDateAdditions.m */; };
 		EE20ABFE1B62A4B6009B50D6 /* SSMaterialStepView.m in Sources */ = {isa = PBXBuildFile; fileRef = EE20ABFC1B62A4B6009B50D6 /* SSMaterialStepView.m */; };
 		EE2ED9CA1D34574D005BD466 /* SSBundleHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = EE2ED9C91D34574C005BD466 /* SSBundleHelper.m */; };
-		EE2ED9CD1D345903005BD466 /* SSCalendarCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EE2ED9CB1D345903005BD466 /* SSCalendarCollectionViewCell.xib */; };
-		EE2ED9CE1D345903005BD466 /* SSMaterialCalendarPicker.xib in Resources */ = {isa = PBXBuildFile; fileRef = EE2ED9CC1D345903005BD466 /* SSMaterialCalendarPicker.xib */; };
+		EE2ED9D01D345B80005BD466 /* CalendarViews.bundle in Resources */ = {isa = PBXBuildFile; fileRef = EE2ED9CF1D345B80005BD466 /* CalendarViews.bundle */; };
 		EE4B8B691B5ED299005ACB3C /* SSMaterialCalendarPicker.m in Sources */ = {isa = PBXBuildFile; fileRef = EE4B8B681B5ED299005ACB3C /* SSMaterialCalendarPicker.m */; };
 		EE4B8B6F1B5ED50B005ACB3C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE4B8B6D1B5ED50B005ACB3C /* Main.storyboard */; };
 		EE96C73D1BD9AB43003059EA /* SSNoSpacingCollectionLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = EE96C73C1BD9AB43003059EA /* SSNoSpacingCollectionLayout.m */; };
@@ -31,8 +30,7 @@
 		EE20ABFC1B62A4B6009B50D6 /* SSMaterialStepView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSMaterialStepView.m; sourceTree = "<group>"; };
 		EE2ED9C81D34574C005BD466 /* SSBundleHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSBundleHelper.h; sourceTree = "<group>"; };
 		EE2ED9C91D34574C005BD466 /* SSBundleHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSBundleHelper.m; sourceTree = "<group>"; };
-		EE2ED9CB1D345903005BD466 /* SSCalendarCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SSCalendarCollectionViewCell.xib; sourceTree = "<group>"; };
-		EE2ED9CC1D345903005BD466 /* SSMaterialCalendarPicker.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SSMaterialCalendarPicker.xib; sourceTree = "<group>"; };
+		EE2ED9CF1D345B80005BD466 /* CalendarViews.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = CalendarViews.bundle; sourceTree = "<group>"; };
 		EE4B8B671B5ED299005ACB3C /* SSMaterialCalendarPicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSMaterialCalendarPicker.h; sourceTree = "<group>"; };
 		EE4B8B681B5ED299005ACB3C /* SSMaterialCalendarPicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSMaterialCalendarPicker.m; sourceTree = "<group>"; };
 		EE4B8B6E1B5ED50B005ACB3C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -115,8 +113,7 @@
 				EE4B8B681B5ED299005ACB3C /* SSMaterialCalendarPicker.m */,
 				EE96C73B1BD9AB43003059EA /* SSNoSpacingCollectionLayout.h */,
 				EE96C73C1BD9AB43003059EA /* SSNoSpacingCollectionLayout.m */,
-				EE2ED9CB1D345903005BD466 /* SSCalendarCollectionViewCell.xib */,
-				EE2ED9CC1D345903005BD466 /* SSMaterialCalendarPicker.xib */,
+				EE2ED9CF1D345B80005BD466 /* CalendarViews.bundle */,
 				EE2ED9C81D34574C005BD466 /* SSBundleHelper.h */,
 				EE2ED9C91D34574C005BD466 /* SSBundleHelper.m */,
 			);
@@ -233,9 +230,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EE2ED9CD1D345903005BD466 /* SSCalendarCollectionViewCell.xib in Resources */,
 				EE4B8B6F1B5ED50B005ACB3C /* Main.storyboard in Resources */,
-				EE2ED9CE1D345903005BD466 /* SSMaterialCalendarPicker.xib in Resources */,
+				EE2ED9D01D345B80005BD466 /* CalendarViews.bundle in Resources */,
 				EEE816441B585EE5005ACEA6 /* LaunchScreen.xib in Resources */,
 				EEE816401B585EE5005ACEA6 /* Images.xcassets in Resources */,
 			);
