@@ -85,8 +85,8 @@
     self = [super initWithFrame:frame];
     if (self) {
         UINib *cellNib = [UINib nibWithNibName:kCalendarCellIdentifier bundle:nil];
-        self = [[[NSBundle mainBundle] loadNibNamed:kCalendarPickerIdentifier
-                                              owner:self options:nil] objectAtIndex:0];
+        self = [[[NSBundle bundleForClass:[SSMaterialCalendarPicker class]]
+                 loadNibNamed:kCalendarPickerIdentifier owner:self options:nil] objectAtIndex:0];
         [self setFrame:frame];
         [self initializeDates];
         [self addCalendarMask];
