@@ -114,7 +114,7 @@
 }
 
 - (void)changeTitleColor:(BOOL)selected {
-    UIColor *targetColor = (selected||self.headerMode)?[UIColor whiteColor]:[UIColor blackColor];
+    UIColor *targetColor = (selected&&!self.headerMode)?[UIColor whiteColor]:[UIColor blackColor];
     [self.selectionIndicator setAlpha:selected?1.0f:0.0f];
     if ([self.dayLabel attributedText] == nil)
         [self.dayLabel setTextColor:targetColor];
