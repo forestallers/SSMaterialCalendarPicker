@@ -82,6 +82,7 @@
     if (self.selectionIndicator == nil) {
         self.selectionIndicator = [[UIView alloc] initWithFrame:self.innerButton.frame];
         self.selectionIndicator.backgroundColor = self.primaryColor == nil? kDefaultSelectedColor:self.primaryColor;
+        if (self.headerMode) self.selectionIndicator.backgroundColor = [UIColor clearColor];
         self.selectionIndicator.layer.cornerRadius = CGRectGetWidth(self.selectionIndicator.frame)/2;
         if (self.lighterRadius) self.selectionIndicator.layer.cornerRadius = 4.0f;
         self.selectionIndicator.alpha = 0.0f;
@@ -113,13 +114,14 @@
 }
 
 - (void)changeTitleColor:(BOOL)selected {
+    UIColor *targetColor = (selected||self.headerMode)?[UIColor whiteColor]:[UIColor blackColor];
     [self.selectionIndicator setAlpha:selected?1.0f:0.0f];
     if ([self.dayLabel attributedText] == nil)
-        [self.dayLabel setTextColor:selected?[UIColor whiteColor]:[UIColor blackColor]];
+        [self.dayLabel setTextColor:targetColor];
     else {
         NSMutableAttributedString *attrString = [[self.dayLabel attributedText] mutableCopy];
         [attrString addAttribute:NSForegroundColorAttributeName
-                           value:selected?[UIColor whiteColor]:[UIColor blackColor]
+                           value:targetColor
                            range:NSMakeRange(0, attrString.length)];
         [self.dayLabel setAttributedText:attrString];
     }
