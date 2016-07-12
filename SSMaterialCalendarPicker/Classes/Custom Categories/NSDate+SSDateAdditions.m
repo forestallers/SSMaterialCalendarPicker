@@ -70,7 +70,8 @@
 }
 
 + (int)daysFromLastSunday {
-    int weekday = (int)[[NSCalendar currentCalendar] component:NSCalendarUnitWeekday fromDate:[NSDate date]];
+    NSDateComponents* comps = [[NSCalendar currentCalendar] components:NSCalendarUnitWeekday fromDate:[NSDate date]];
+    int weekday = (int)comps.weekday;
     return --weekday;
 }
 
