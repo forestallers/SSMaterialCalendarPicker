@@ -12,7 +12,7 @@ Tested on iOS 7, iOS8 and iOS9. Supports **ONLY** portrait orientation, atm.
 [![Platform](https://img.shields.io/cocoapods/p/SSMaterialCalendarPicker.svg?style=flat-square)](http://cocoadocs.org/docsets/SSMaterialCalendarPicker)
 
 ##Demo GIF##
-![Demo](http://i.imgur.com/dVYGVKD.gif)  
+![Demo](http://i.imgur.com/B8J0qIA.gif)  
 (in Portuguese, but the default language is English)
 
 ##Installation##

@@ -7,9 +7,8 @@
 //
 
 #import "ExampleViewController.h"
-#import "SSMaterialCalendarPicker.h"
-
-#import "NSDate+SSDateAdditions.h"
+#import <SSMaterialCalendarPicker/SSMaterialCalendarPicker.h>
+#import <SSMaterialCalendarPicker/NSDate+SSDateAdditions.h>
 
 @implementation ExampleViewController {
     SSMaterialCalendarPicker *datePicker;

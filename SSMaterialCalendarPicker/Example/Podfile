@@ -1,0 +1,5 @@
+platform :ios, '7.1'
+
+target 'SSMaterialCalendarPickerExample' do
+pod 'SSMaterialCalendarPicker'
+end
